@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoDive_Integradora.Views.EditProductPage"
+             Title="EditProductPage">
+    
+    <StackLayout Padding="20">
+
+        <label Text="Agregar Producto" FontSIze="24" HorizonttalOptions="Center"/>
+
+        <Entry x:Name="NombreEntry" Placeholder="Nombre"/>
+        <Entry x:Name="ContactoEntry" Placeholder="Correo o Numero" keyboard="Numeric"/>
+        <Entry x:Name="DescripcionEntry" Placeholder="Comentario"/>
+
+        <Button Text="Actualizar" Clicked="OnAddProductClicked"/>
+
+
+    </StackLayout>
+</ContentPage>

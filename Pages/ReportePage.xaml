@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="EcoDive_Integradora.Pages.ReportePage"
+              Title="Reporte">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Tomar Foto" FontAttributes="Bold" />
+            <Button Text="Abrir Cámara" Clicked="OnTakePhotoClicked" />
+
+            <Image x:Name="PhotoPreview" HeightRequest="200" />
+
+            <Label Text="Ubicación Actual" FontAttributes="Bold" />
+            <Button Text="Obtener GPS" Clicked="OnGetLocationClicked" />
+            <Label x:Name="LocationLabel" Text="Ubicación pendiente..." />
+
+        </VerticalStackLayout>
+    </ScrollView>
+    </ContentPage>

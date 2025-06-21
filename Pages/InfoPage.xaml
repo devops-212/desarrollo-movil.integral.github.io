@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="EcoDive_Integradora.Pages.InfoPage"
+                Title="ODS 14- Vida Submarina">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Image Source="logo.png" HeightRequest="120" HorizontalOptions="Center" />
+
+            <Label Text="Objetivo de Desarrollo Sostenible 14"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="Aquamarine" />
+
+            <Label Text="Gestionar sosteniblemente los bosques, luchar contra la desertificación, detener e invertir la degradación de las tierras y detener la pérdida de biodiversidad."
+                   FontSize="16"
+                   TextColor="Black"
+                   LineBreakMode="WordWrap" />
+
+            <Image Source="ods14_info.jpg" HeightRequest="200" Aspect="AspectFit" />
+
+        </VerticalStackLayout>
+    
+   </ScrollView>
+    
+    </ContentPage>
+    

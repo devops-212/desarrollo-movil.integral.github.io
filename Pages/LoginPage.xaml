@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoDive_Integradora.Pages.LoginPage"
+              Title="Iniciar Sesión"
+ BackgroundColor="#E0F7E9">
+
+    <VerticalStackLayout Padding="30" Spacing="25">
+
+        <Image Source="logo.png"
+               WidthRequest="150"
+               HeightRequest="150"
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="UsernameEntry" Placeholder="Usuario" />
+        <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" />
+
+        <Button Text="Iniciar Sesión"
+                Clicked="OnLoginClicked"
+                BackgroundColor="#00796B"
+                TextColor="White" />
+    </VerticalStackLayout>
+    </ContentPage>

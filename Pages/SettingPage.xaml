@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="EcoDive_Integradora.Pages.SettingPage"
+    Title="Ajustes">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="Usuario: admin" FontSize="18" />
+        <Label Text="Email: admin@ecoapp.com" FontSize="18" />
+        <Label Text="Versión de la app: 1.0" FontSize="18" />
+
+        <Button Text="Cerrar sesión" Clicked="OnLogoutClicked" BackgroundColor="Tomato" TextColor="White" />
+
+    </VerticalStackLayout>
+    </ContentPage>
