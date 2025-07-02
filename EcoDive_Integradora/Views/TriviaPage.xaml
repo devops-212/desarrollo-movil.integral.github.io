@@ -1,0 +1,68 @@
+<ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="EcoDive_Integradora.Views.TriviaPage"
+    Title="Trivia ODS 14">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Entry x:Name="NombreEntry" Placeholder="Nombre completo" />
+
+            <!-- Pregunta 1 -->
+            <Label Text="1. ¿Qué porcentaje del oxígeno del planeta proviene del océano?" />
+            <Picker x:Name="Pregunta1Picker">
+                <Picker.Items>
+                    <x:String>A) 30%</x:String>
+                    <x:String>B) 50%</x:String>
+                    <x:String>C) 70%</x:String>
+                    <x:String>D) 90%</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Pregunta 2 -->
+            <Label Text="2. ¿Cuál es la principal causa de contaminación marina?" />
+            <Picker x:Name="Pregunta2Picker">
+                <Picker.Items>
+                    <x:String>A) Petróleo</x:String>
+                    <x:String>B) Residuos plásticos</x:String>
+                    <x:String>C) Desechos humanos</x:String>
+                    <x:String>D) Ruido submarino</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Pregunta 3 -->
+            <Label Text="3. ¿Qué es la acidificación del océano?" />
+            <Picker x:Name="Pregunta3Picker">
+                <Picker.Items>
+                    <x:String>A) Aumento del pH del mar</x:String>
+                    <x:String>B) Reducción del pH del mar por CO₂</x:String>
+                    <x:String>C) Calentamiento del mar</x:String>
+                    <x:String>D) Contaminación por petróleo</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Pregunta 4 -->
+            <Label Text="4. ¿Cuál de estas especies marinas está en peligro por la pesca excesiva?" />
+            <Picker x:Name="Pregunta4Picker">
+                <Picker.Items>
+                    <x:String>A) Tiburón</x:String>
+                    <x:String>B) Delfín</x:String>
+                    <x:String>C) Medusa</x:String>
+                    <x:String>D) Coral</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <!-- Pregunta 5 -->
+            <Label Text="5. ¿Qué acción ayuda a conservar la vida marina?" />
+            <Picker x:Name="Pregunta5Picker">
+                <Picker.Items>
+                    <x:String>A) Usar plásticos de un solo uso</x:String>
+                    <x:String>B) Comer pescado todos los días</x:String>
+                    <x:String>C) Reducir residuos, reciclar y reutilizar</x:String>
+                    <x:String>D) Visitar acuarios</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="Enviar respuestas" Clicked="OnEnviarClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

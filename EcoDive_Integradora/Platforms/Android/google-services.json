@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "601786420819",
+    "firebase_url": "https://ecodivemareaazul-default-rtdb.firebaseio.com",
+    "project_id": "ecodivemareaazul",
+    "storage_bucket": "ecodivemareaazul.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601786420819:android:1555f628f7fe2010fd00a6",
+        "android_client_info": {
+          "package_name": "VidaMaritima.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAkZ1Lj9JsqKz2HXRB88ofM65cwVZ84Dg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

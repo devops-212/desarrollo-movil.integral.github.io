@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoDive_Integradora.Views.EditProductPage"
+             Title="Editar Producto"
+             BackgroundColor="#E0F7FA">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Editar información del producto"
+                   FontSize="24"
+                   TextColor="#00796B"
+                   HorizontalOptions="Center" />
+
+            <Entry x:Name="NombreEntry"
+                   Placeholder="Nombre del producto"
+                   PlaceholderColor="#4DB6AC"
+                   BackgroundColor="White"
+                   TextColor="Black" />
+
+            <Entry x:Name="ContactoEntry"
+                   Placeholder="Dato numérico (ej. precio)"
+                   PlaceholderColor="#4DB6AC"
+                   Keyboard="Numeric"
+                   BackgroundColor="White"
+                   TextColor="Black" />
+
+            <Editor x:Name="DescripcionEntry"
+                    Placeholder="Descripción del producto"
+                    PlaceholderColor="#4DB6AC"
+                    BackgroundColor="White"
+                    HeightRequest="100"
+                    TextColor="Black" />
+
+            <Button Text="Actualizar"
+                    BackgroundColor="#00796B"
+                    TextColor="White"
+                    Clicked="OnUpdateProductoClicked"
+                    CornerRadius="12" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

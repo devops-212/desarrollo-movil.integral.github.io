@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="EcoDive_Integradora.Views.RegisterPage"
+             Title="Crear cuenta"
+             BackgroundColor="#E0F2F1">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Registro de Usuario" FontSize="24" HorizontalOptions="Center" />
+
+        <Entry x:Name="EmailEntry" Placeholder="Correo electrónico" Keyboard="Email" />
+        <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" />
+        <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirmar contraseña" IsPassword="True" />
+
+        <Button Text="Crear cuenta"
+                Clicked="OnRegisterClicked"
+                BackgroundColor="#00796B"
+                TextColor="White" />
+
+        <Label Text="¿Ya tienes cuenta? Inicia sesión"
+               TextColor="Blue"
+               HorizontalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnLoginTapped" />
+            </Label.GestureRecognizers>
+        </Label>
+    </VerticalStackLayout>
+</ContentPage>

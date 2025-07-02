@@ -1,0 +1,53 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EcoDive_Integradora.Views.MainPage"
+             Title="Menú Principal"
+             BackgroundColor="#E0F7FA">
+    <!-- Fondo similar al de Contacto -->
+
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+        <Label Text="Menú Principal"
+               FontSize="26"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#00796B" />
+
+        <Button Text="Agregar Contacto"
+                Clicked="OnAddProductClicked"
+                BackgroundColor="#00796B"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="50" />
+
+        <Button Text="Buscar Contacto"
+                Clicked="OnSearchProductClicked"
+                BackgroundColor="#00796B"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="50" />
+
+        <Button Text="Mostrar Contacto"
+                Clicked="OnListProductClicked"
+                BackgroundColor="#00796B"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="50" />
+        <Button Text="Responder Trivia"
+                Clicked="OnResponderTriviaClicked" />
+        
+        <Button Text="Ver Respuestas"
+                Clicked="OnVerRespuestasClicked" />
+
+
+        <Button 
+Text="Salir" 
+BackgroundColor="#00796B"
+TextColor="White" 
+Clicked="OnSalirClicked"
+Margin="0,20,0,5"/>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
