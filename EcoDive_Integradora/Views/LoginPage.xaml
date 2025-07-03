@@ -4,9 +4,15 @@
              x:Class="EcoDive_Integradora.Views.LoginPage"
              Title="Iniciar sesión"
                 BackgroundColor="#E0F2F1">
+    
 
     <VerticalStackLayout Padding="20" Spacing="10">
         <Label Text="Iniciar sesión" FontSize="24" HorizontalOptions="Center" />
+
+        <Image Source="splash_icon.png"
+WidthRequest="100"
+HeightRequest="100"
+HorizontalOptions="Center"/>
 
         <Entry x:Name="EmailEntry" Placeholder="Correo electrónico" />
         <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" />
@@ -20,6 +26,7 @@
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnRegisterTapped" />
             </Label.GestureRecognizers>
+            
             
         </Label>
     </VerticalStackLayout>

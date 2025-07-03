@@ -39,7 +39,7 @@
         <Button Text="Ver Respuestas"
                 Clicked="OnVerRespuestasClicked" />
 
-
+       
         <Button 
 Text="Salir" 
 BackgroundColor="#00796B"
