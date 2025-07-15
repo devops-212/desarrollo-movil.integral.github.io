@@ -7,9 +7,8 @@
 
     <!-- Menú inferior (TabBar) -->
     <TabBar>
-        <ShellContent Title="Inicio" ContentTemplate="{DataTemplate local:MainPage}" Icon="home_icon.png" />
-        <ShellContent Title="Noticias" ContentTemplate="{DataTemplate local:InfoPage}" Icon="news_icon.png" />
-        <ShellContent Title="Trivia" ContentTemplate="{DataTemplate local:TriviaPage}" Icon="contact_icon.png" />
+        <ShellContent Title="Menu" ContentTemplate="{DataTemplate local:MainPage}"  />
+        <ShellContent Title="ODS-14" ContentTemplate="{DataTemplate local:InfoPage}"  />
     </TabBar>
 
     <!-- Rutas ocultas (sin mostrar en menú) -->

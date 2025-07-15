@@ -2,16 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoDive_Integradora.Views.InfoPage"
-             Title="Noticias"
+             Title="Informacion EcoDive"
               BackgroundColor="#E0F7FA">
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
-            <Label Text="Noticias recientes" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+            <Label Text="Descripcion" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black" />
 
-            <Label Text="• EcoDive participa en limpieza de arrecifes en Cancún." FontSize="16" />
-            <Label Text="• Se lanza nueva campaña de conservación marina 2025." FontSize="16" />
-            <Label Text="• Nuevos productos ecológicos disponibles en nuestra tienda." FontSize="16" />
+            <Label Text="• EcoDive participa en limpieza de arrecifes en Cancún." FontSize="16" TextColor="Black"/>
+            <Label Text="• Se lanza nueva campaña de conservación marina 2025." FontSize="16" TextColor="Black"/>
+            <Label Text="• Nuevos productos ecológicos disponibles en nuestra tienda." FontSize="16" TextColor="Black"/>
             <Label Text="Información sobre el ODS 14"
                    FontSize="24"
                    FontAttributes="Bold"
