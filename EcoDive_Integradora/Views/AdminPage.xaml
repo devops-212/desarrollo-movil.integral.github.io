@@ -1,0 +1,36 @@
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="EcoDive_Integradora.Views.AdminPage"
+    Title="Panel de Administrador">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="Bienvenido Administrador"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Descripción de EcoDive" FontSize="18" FontAttributes="Bold" TextColor="DarkGreen" />
+            <Label Text="• EcoDive participa en limpieza de arrecifes en Cancún." FontSize="16" TextColor="Black"/>
+            <Label Text="• Se lanza nueva campaña de conservación marina 2025." FontSize="16" TextColor="Black"/>
+            <Label Text="• Nuevos productos ecológicos disponibles en nuestra tienda." FontSize="16" TextColor="Black"/>
+
+            <Label Text="ODS 14 - Vida Submarina"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#00796B" />
+
+            <Image Source="ods14_info_icon.jpg"
+                   HeightRequest="200"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Center" />
+
+            <Label Text="El ODS 14 busca conservar y utilizar de forma sostenible los océanos, los mares y los recursos marinos. Incluye metas relacionadas con la pesca sostenible, la reducción de la contaminación marina, y la protección de ecosistemas acuáticos." FontSize="16" TextColor="Black" />
+
+            <Label Text="Como parte del proyecto EcoDive, junto a iniciativas como Marea Azul, buscamos generar conciencia a través del videojuego educativo y actividades de divulgación como las mostradas por los equipos de Emiliano y Brian." FontSize="14" TextColor="Gray" />
+
+          
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

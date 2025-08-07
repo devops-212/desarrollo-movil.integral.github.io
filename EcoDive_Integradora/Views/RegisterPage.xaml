@@ -9,9 +9,11 @@
     <VerticalStackLayout Padding="20" Spacing="15">
         <Label Text="Registro de Usuario" FontSize="24" HorizontalOptions="Center" />
 
-        <Entry x:Name="EmailEntry" Placeholder="Correo electrónico" Keyboard="Email" />
-        <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" />
-        <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirmar contraseña" IsPassword="True" />
+        <Entry x:Name="EmailEntry" Placeholder="Correo electrónico" TextColor="Black" />
+      
+        <Entry x:Name="PasswordEntry" Placeholder="Contraseña" TextColor="Black" IsPassword="True" />
+       
+        
 
         <Button Text="Crear cuenta"
                 Clicked="OnRegisterClicked"
@@ -25,5 +27,14 @@
                 <TapGestureRecognizer Tapped="OnLoginTapped" />
             </Label.GestureRecognizers>
         </Label>
+
+
+        <!-- Botón oculto para crear admin -->
+        <Button x:Name="CreateAdminButton"
+                    Text="Crear Admin (pruebas)"
+                    Clicked="OnCreateAdminClicked"
+                    IsVisible="False"
+                    BackgroundColor="DarkRed"
+                    TextColor="White" />
     </VerticalStackLayout>
 </ContentPage>

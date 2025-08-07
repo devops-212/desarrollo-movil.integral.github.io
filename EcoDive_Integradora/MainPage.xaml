@@ -1,53 +1,33 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoDive_Integradora.Views.MainPage"
-             Title="Menú Principal"
-             BackgroundColor="#E0F7FA">
-    <!-- Fondo similar al de Contacto -->
+             Title="Informacion EcoDive"
+              BackgroundColor="#E0F7FA">
 
-    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Label Text="Descripcion" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black" />
+          
 
-        <Label Text="Menú Principal"
-               FontSize="26"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               TextColor="#00796B" />
+            <Label Text="• EcoDive participa en limpieza de arrecifes en Cancún." FontSize="16" TextColor="Black"/>
+            <Label Text="• Se lanza nueva campaña de conservación marina 2025." FontSize="16" TextColor="Black"/>
+            <Label Text="• Nuevos productos ecológicos disponibles en nuestra tienda." FontSize="16" TextColor="Black"/>
+            <Label Text="Información sobre el ODS 14"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#00796B"
+                   HorizontalOptions="Center" />
 
-        <Button Text="Agregar Contacto"
-                Clicked="OnAddProductClicked"
-                BackgroundColor="#00796B"
-                TextColor="White"
-                CornerRadius="12"
-                HeightRequest="50" />
+            <Image Source="ods14_info_icon.jpg"
+                   HeightRequest="200"
+                   Aspect="AspectFill"
+                   HorizontalOptions="Center" />
 
-        <Button Text="Buscar Contacto"
-                Clicked="OnSearchProductClicked"
-                BackgroundColor="#00796B"
-                TextColor="White"
-                CornerRadius="12"
-                HeightRequest="50" />
+            <Label Text="El ODS 14 busca conservar y utilizar de forma sostenible los océanos, los mares y los recursos marinos. Incluye metas relacionadas con la pesca sostenible, la reducción de la contaminación marina, y la protección de ecosistemas acuáticos."
+                   FontSize="16"
+                   TextColor="Black" />
 
-        <Button Text="Mostrar Contacto"
-                Clicked="OnListProductClicked"
-                BackgroundColor="#00796B"
-                TextColor="White"
-                CornerRadius="12"
-                HeightRequest="50" />
-        <Button Text="Responder Trivia"
-                Clicked="OnResponderTriviaClicked" />
-        
-        <Button Text="Ver Respuestas"
-                Clicked="OnVerRespuestasClicked" />
-
-       
-        <Button 
-Text="Salir" 
-BackgroundColor="#00796B"
-TextColor="White" 
-Clicked="OnSalirClicked"
-Margin="0,20,0,5"/>
-
-
-
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

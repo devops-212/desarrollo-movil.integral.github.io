@@ -1,45 +1,34 @@
-﻿namespace EcoDive_Integradora.Views
+﻿using Microsoft.Maui.Controls;
+using EcoDive_Integradora.Helpers;
+using EcoDive_Integradora.Models;
+using System.Threading.Tasks;
+
+namespace EcoDive_Integradora.Views
 {
     public partial class MainPage : ContentPage
     {
-
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private async void OnAddProductClicked(object sender, EventArgs e)
+        protected override async void OnAppearing()
         {
-            await Navigation.PushAsync(new AddProductPage());
-        }
-        private async void OnSearchProductClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SearchProductPage());
-        }
-        private async void OnListProductClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ListProductsPage());
-        }
-        private async void OnSalirClicked(object sender, EventArgs e)
-        {
-            // Si estás guardando sesión con Preferences, podrías limpiar aquí
-            // Preferences.Clear();
+            base.OnAppearing();
 
-            // Redirige a la página de login (ajusta según tu estructura)
-            Application.Current.MainPage = new NavigationPage(new LoginPage());
-        }
+            // ✅ Obtener el correo sin duplicar variable
+            string email = "";
 
-        private async void OnResponderTriviaClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new TriviaPage());
-        }
+            if (Application.Current.MainPage is AppShell appShell)
+            {
+                email = appShell.UsuarioCorreo ?? "Correo no disponible";
+            }
+            else if (Application.Current.MainPage is AdminShell adminShell)
+            {
+                email = adminShell.AdminCorreo ?? "Correo no disponible";
+            }
 
-        private async void OnVerRespuestasClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ListTriviaPage());
+          
         }
     }
-
-
 }

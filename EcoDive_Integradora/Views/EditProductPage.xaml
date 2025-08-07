@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EcoDive_Integradora.Views.EditProductPage"
-             Title="Editar Producto"
-             BackgroundColor="#E0F7FA">
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="EcoDive_Integradora.Views.EditProductPage"
+    Title="Enviar comentario"
+    BackgroundColor="#E0F7FA">
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="Editar información del producto"
+            <Label Text="Enviar comentario"
                    FontSize="24"
-                   TextColor="#00796B"
-                   HorizontalOptions="Center" />
+                   TextColor="Black"
+                   HorizontalOptions="Center" 
+                   FontAttributes="Bold"/>
 
-            <Entry x:Name="NombreEntry"
-                   Placeholder="Nombre del producto"
-                   PlaceholderColor="#4DB6AC"
+            <!-- Campo: Nombre -->
+            <Entry x:Name="name"
+                   Placeholder="Nombre completo"
+                   PlaceholderColor="Black"
                    BackgroundColor="White"
                    TextColor="Black" />
 
-            <Entry x:Name="ContactoEntry"
-                   Placeholder="Dato numérico (ej. precio)"
-                   PlaceholderColor="#4DB6AC"
-                   Keyboard="Numeric"
+            <!-- Campo: Correo -->
+            <Entry x:Name="emailid"
+                   Placeholder="Correo electrónico"
+                   PlaceholderColor="Black"
+                   Keyboard="Email"
                    BackgroundColor="White"
                    TextColor="Black" />
 
-            <Editor x:Name="DescripcionEntry"
-                    Placeholder="Descripción del producto"
-                    PlaceholderColor="#4DB6AC"
+            <!-- Campo: Comentario -->
+            <Editor x:Name="msgContent"
+                    Placeholder="Sugerencia o comentario"
+                    PlaceholderColor="Black"
                     BackgroundColor="White"
                     HeightRequest="100"
                     TextColor="Black" />
 
-            <Button Text="Actualizar"
+            <!-- Botón de Envío -->
+            <Button Text="Enviar"
                     BackgroundColor="#00796B"
                     TextColor="White"
                     Clicked="OnUpdateProductoClicked"

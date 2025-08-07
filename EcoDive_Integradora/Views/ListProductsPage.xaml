@@ -1,32 +1,43 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EcoDive_Integradora.Views.ListProductsPage"
-             Title="Lista de Contactos">
+             Title="Lista de contactos">
 
-    <CollectionView x:Name="ProductosCollection">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Frame BorderColor="Gray" Padding="10" Margin="5">
-                    <VerticalStackLayout>
-                        <Label Text="{Binding Nombre}" FontAttributes="Bold" />
-                        <Label Text="{Binding Contacto}" />
-                        <Label Text="{Binding Descripcion}" />
+    <ScrollView>
+        <CollectionView x:Name="ProductosCollection">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="DarkGreen" CornerRadius="12" Margin="10" Padding="12" BackgroundColor="#F2FFF5">
+                        <StackLayout Spacing="5">
 
-                        <HorizontalStackLayout Spacing="10">
-                            <Button Text="✏️ Editar" 
-                                    Clicked="OnEditClicked"
-                                    BackgroundColor="#FFA726"
-                                    TextColor="White"
-                                    CornerRadius="8"/>
-                            <Button Text="🗑️ Eliminar" 
-                                    Clicked="OnDeleteClicked"
-                                    BackgroundColor="#EF5350"
-                                    TextColor="White"
-                                    CornerRadius="8"/>
-                        </HorizontalStackLayout>
-                    </VerticalStackLayout>
-                </Frame>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+                            <!-- Datos del formulario -->
+                            <Label Text="{Binding name}" FontAttributes="Bold" FontSize="18" TextColor="Black" />
+                            <Label Text="{Binding email}" FontSize="14" TextColor="Black" />
+                            <Label Text="{Binding message}" FontSize="14" TextColor="Black" />
+
+                            <!-- Campos adicionales si se usan Interno -->
+                            <StackLayout Margin="0,8,0,0" Spacing="2">
+                                <Label Text="📌 Categoría:" FontAttributes="Bold" FontSize="13" />
+                                <Label Text="{Binding Categoria}" FontSize="13" TextColor="DarkOrange" />
+
+                                <Label Text="📂 Subcategoría:" FontAttributes="Bold" FontSize="13" />
+                                <Label Text="{Binding Subcategoria}" FontSize="13" TextColor="DarkOliveGreen" />
+
+                                <Label Text="✅ Estado:" FontAttributes="Bold" FontSize="13" />
+                                <Label Text="{Binding Estado}" FontSize="13" TextColor="DodgerBlue" />
+                            </StackLayout>
+
+                            <!-- Botones -->
+                            <StackLayout Orientation="Horizontal" Spacing="10" Margin="0,10,0,0" HorizontalOptions="Center">
+                                <Button Text="✏️ Editar" Clicked="OnEditClicked" BackgroundColor="ForestGreen" TextColor="White" />
+                                <Button Text="🗑 Eliminar" Clicked="OnDeleteClicked" BackgroundColor="Firebrick" TextColor="White" />
+                                <Button Text="📋 Estado" Clicked="OnEditStatusClicked" BackgroundColor="DodgerBlue" TextColor="White" />
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ScrollView>
 </ContentPage>

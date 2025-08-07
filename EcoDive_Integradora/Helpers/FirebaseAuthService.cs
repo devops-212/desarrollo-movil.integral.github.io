@@ -64,5 +64,22 @@ namespace EcoDive_Integradora.Services
 
             return null;
         }
+        // se se Deshabilita en  login la opcion de recuperar contraseña comentar toda la parte de ResetPassword 
+        public static async Task<bool> ResetPassword(string email)
+        {
+            var client = new HttpClient();
+            var request = new
+            {
+                requestType = "PASSWORD_RESET",
+                email = email
+            };
+
+            var content = new StringContent(JsonSerializer.Serialize(request), Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync($"https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key={apiKey}", content);
+
+            return response.IsSuccessStatusCode;
+        }
+
     }
 }

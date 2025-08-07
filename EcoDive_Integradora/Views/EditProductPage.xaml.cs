@@ -25,32 +25,29 @@ namespace EcoDive_Integradora.Views
             {
                 if (!string.IsNullOrEmpty(ProductoId))
                 {
-                    // Debug temporal
-                    // await DisplayAlert("DEBUG", $"ProductoId: {ProductoId}", "OK");
-
                     _producto = await _firebaseHelper.GetProductoById(ProductoId);
 
                     if (_producto != null)
                     {
-                        NombreEntry.Text = _producto.Nombre;
-                        ContactoEntry.Text = _producto.Contacto.ToString();
-                        DescripcionEntry.Text = _producto.Descripcion;
+                        name.Text = _producto.name;
+                        emailid.Text = _producto.email;
+                        msgContent.Text = _producto.message;
                     }
                     else
                     {
-                        await DisplayAlert("Error", "Producto no encontrado", "OK");
+                        await DisplayAlert("Error", "Mensaje no encontrado", "OK");
                         await Navigation.PopAsync();
                     }
                 }
                 else
                 {
-                    await DisplayAlert("Error", "No se recibió el ID del producto", "OK");
+                    await DisplayAlert("Error", "No se recibió el ID del mensaje", "OK");
                     await Navigation.PopAsync();
                 }
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Excepción", $"Error al cargar el producto: {ex.Message}", "OK");
+                await DisplayAlert("Excepción", $"Error al cargar el mensaje: {ex.Message}", "OK");
                 await Navigation.PopAsync();
             }
         }
@@ -59,37 +56,31 @@ namespace EcoDive_Integradora.Views
         {
             if (_producto == null)
             {
-                await DisplayAlert("Error", "Producto no cargado correctamente", "OK");
+                await DisplayAlert("Error", "Mensaje no cargado correctamente", "OK");
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(NombreEntry.Text) ||
-                string.IsNullOrWhiteSpace(ContactoEntry.Text) ||
-                string.IsNullOrWhiteSpace(DescripcionEntry.Text))
+            if (string.IsNullOrWhiteSpace(name.Text) ||
+                string.IsNullOrWhiteSpace(emailid.Text) ||
+                string.IsNullOrWhiteSpace(msgContent.Text))
             {
                 await DisplayAlert("Error", "Todos los campos son obligatorios", "OK");
                 return;
             }
 
-            if (!decimal.TryParse(ContactoEntry.Text, out decimal contactoDecimal))
-            {
-                await DisplayAlert("Error", "El campo 'Contacto' debe ser numérico", "OK");
-                return;
-            }
-
             try
             {
-                _producto.Nombre = NombreEntry.Text;
-                _producto.Contacto = contactoDecimal;
-                _producto.Descripcion = DescripcionEntry.Text;
+                _producto.name = name.Text;
+                _producto.email = emailid.Text;
+                _producto.message = msgContent.Text;
 
                 await _firebaseHelper.UpdateProducto(_producto.Id, _producto);
-                await DisplayAlert("Éxito", "Registro actualizado correctamente", "OK");
+                await DisplayAlert("Éxito", "Mensaje actualizado correctamente", "OK");
                 await Navigation.PopAsync();
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"No se pudo actualizar el producto: {ex.Message}", "OK");
+                await DisplayAlert("Error", $"No se pudo actualizar el mensaje: {ex.Message}", "OK");
             }
         }
     }

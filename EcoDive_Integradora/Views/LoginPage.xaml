@@ -27,8 +27,8 @@ HorizontalOptions="Center"/>
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnRegisterTapped" />
             </Label.GestureRecognizers>
-            
-            
+           
+
         </Label>
     </VerticalStackLayout>
 </ContentPage>

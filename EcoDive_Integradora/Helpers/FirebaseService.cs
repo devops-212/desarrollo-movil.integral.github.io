@@ -9,7 +9,7 @@ namespace EcoDive_Integradora.Services
     public static class FirebaseService
     {
         static HttpClient client = new HttpClient();
-        static string firebaseUrl = "https://integradora10a-f1ca9-default-rtdb.firebaseio.com/";
+        static string firebaseUrl = "https://ecodivemareaazul-default-rtdb.firebaseio.com/";
 
         public static async Task GuardarTrivia(TriviaModel trivia)
         {

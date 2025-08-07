@@ -1,16 +1,24 @@
 <Shell
-    x:Class="EcoDive_Integradora.AppShell"
+    x:Class="EcoDive_Integradora.AdminShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:EcoDive_Integradora.Views"
     Shell.FlyoutBehavior="Flyout">
 
-    <FlyoutItem Title="Inicio" Icon="home_icon.png">
-        <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
+    <FlyoutItem Title="Inicio Admin" Icon="home_icon.png">
+        <ShellContent ContentTemplate="{DataTemplate views:AdminPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Contactos" Icon="list_icon.png">
+        <ShellContent ContentTemplate="{DataTemplate views:ListProductsPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Responder Trivia" Icon="trivia_icon.png">
         <ShellContent ContentTemplate="{DataTemplate views:TriviaPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Ver Respuestas Trivia" Icon="results_icon.png">
+        <ShellContent ContentTemplate="{DataTemplate views:ListTriviaPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Cerrar Sesión" Icon="logout_icon.png">

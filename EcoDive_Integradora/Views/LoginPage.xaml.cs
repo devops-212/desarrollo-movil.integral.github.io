@@ -1,53 +1,77 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using EcoDive_Integradora.Helpers;
+using EcoDive_Integradora.Models;
 using Microsoft.Maui.Controls;
 using EcoDive_Integradora.Services;
-using Firebase.Auth;
 
-namespace EcoDive_Integradora.Views
+
+namespace EcoDive_Integradora.Views;
+
+public partial class LoginPage : ContentPage
 {
-    public partial class LoginPage : ContentPage
+    public LoginPage()
     {
-        private const string FirebaseApiKey = "AIzaSyCf0ZvRcTZSjXa0f-ywnl4ZSJ0nbvdyEB0"; // Usa tu API key real
+        InitializeComponent();
+    }
 
-        public LoginPage()
+    private async void OnLoginClicked(object sender, EventArgs e)
+    {
+        string email = EmailEntry.Text?.Trim();
+        string password = PasswordEntry.Text;
+
+        if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
         {
-            InitializeComponent();
+            await DisplayAlert("Error", "Ingresa correo y contraseña.", "OK");
+            return;
         }
 
-        private async void OnLoginClicked(object sender, EventArgs e)
-        {
-            string email = EmailEntry.Text;
-            string password = PasswordEntry.Text;
+        var firebaseHelper = new FirebaseHelper();
+        var user = await firebaseHelper.GetUser(email, password);
 
-            var result = await FirebaseAuthService.Login(email, password);
-            if (result != null)
-            {
-                await DisplayAlert("Bienvenido", $"Sesión iniciada  {result.Email}", "OK");
-                Application.Current.MainPage = new NavigationPage(new AppShell());
-            }
-            else
-            {
-                await DisplayAlert("Error", "Correo o contraseña incorrectos", "OK");
-            }
+        if (user == null)
+        {
+            await DisplayAlert("Error", "Usuario o contraseña incorrectos.", "OK");
+            return;
         }
 
+        string? rol = user.Rol;
 
-        private async void OnRegisterTapped(object sender, EventArgs e)
+        if (rol == "admin")
         {
-            await Navigation.PushAsync(new RegisterPage());
+            await DisplayAlert("Bienvenido", $"Administrador\nCorreo: {user.Email}", "OK");
+            Application.Current.MainPage = new AdminShell(user.Email);
         }
-
-        private async void OnForgotPasswordClicked(object sender, EventArgs e)
+        else
         {
-            string email = await DisplayPromptAsync("Recuperar contraseña", "Introduce tu correo:");
-
-            if (!string.IsNullOrEmpty(email))
-            {
-                var authProvider = new FirebaseAuthProvider(new FirebaseConfig(FirebaseApiKey));
-                await authProvider.SendPasswordResetEmailAsync(email);
-                await DisplayAlert("Correo enviado", "Revisa tu bandeja para restablecer tu contraseña", "OK");
-            }
+            await DisplayAlert("Bienvenido", $"Usuario\nCorreo: {user.Email}", "OK");
+            Application.Current.MainPage = new AppShell(user.Email);
         }
     }
+
+    private async void OnRegisterTapped(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RegisterPage());
+    }
+    private async void OnForgotPasswordClicked(object sender, EventArgs e)
+    {
+        // await DisplayAlert("Recuperación", "Funcionalidad en construcción", "OK");
+        // Aquí podrías redirigir a otra página o enviar un email, etc.Esto es en caso de que no se vaya a dejar el proyecto en prueba funcional para que no mande la recuperacion de contraseña
+
+        string email = EmailEntry.Text?.Trim();
+
+        if (string.IsNullOrWhiteSpace(email))
+        {
+            await DisplayAlert("Error", "Ingresa tu correo para recuperar tu contraseña.", "OK");
+            return;
+        }
+
+        bool enviado = await FirebaseAuthService.ResetPassword(email);
+
+        if (enviado)
+            await DisplayAlert("Éxito", "Se ha enviado un correo para restablecer tu contraseña.", "OK");
+        else
+            await DisplayAlert("Error", "No se pudo enviar el correo de recuperación.", "OK");
+    }
+
 }
+
+

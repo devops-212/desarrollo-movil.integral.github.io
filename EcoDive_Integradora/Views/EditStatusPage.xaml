@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="EcoDive_Integradora.Views.EditStatusPage"
+    Title="Editar Estado">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+
+        <Label Text="Categoría" />
+        <Picker x:Name="CategoriaPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Soporte</x:String>
+                    <x:String>Información</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Subcategoría" />
+        <Picker x:Name="SubcategoriaPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Soporte Videojuego</x:String>
+                    <x:String>Soporte AWP</x:String>
+                    <x:String>Información Videojuego</x:String>
+                    <x:String>Información EcoDive</x:String>
+                    <x:String>Información ODS14</x:String>
+
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Label Text="Estado" />
+        <Picker x:Name="EstadoPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>En proceso</x:String>
+                    <x:String>Enviada</x:String>
+                    <x:String>Resuelto</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Text="💾 Guardar" Clicked="OnGuardarClicked" BackgroundColor="Green" TextColor="White"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\EcoDive_Integradora\\AppShell.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EcoDive_Integradora\\AppShell.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\EcoDive_Integradora\\Views\\AddProductPage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EcoDive_Integradora\\Views\\AddProductPage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\EcoDive_Integradora\\MainPage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EcoDive_Integradora\\MainPage.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
@@ -14,27 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "AddProductPage.xaml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\EcoDive_Integradora\\Views\\AddProductPage.xaml",
+              "RelativeDocumentMoniker": "EcoDive_Integradora\\Views\\AddProductPage.xaml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\EcoDive_Integradora\\Views\\AddProductPage.xaml",
+              "RelativeToolTip": "EcoDive_Integradora\\Views\\AddProductPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-17T21:43:23.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\EcoDive_Integradora\\MainPage.xaml",
               "RelativeDocumentMoniker": "EcoDive_Integradora\\MainPage.xaml",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\EcoDive_Integradora\\MainPage.xaml",
               "RelativeToolTip": "EcoDive_Integradora\\MainPage.xaml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-02T20:46:26.663Z",
+              "WhenOpened": "2025-07-17T21:42:54.712Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\EcoDive_Integradora\\AppShell.xaml",
+              "RelativeDocumentMoniker": "EcoDive_Integradora\\AppShell.xaml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\EcoDive_Integradora\\EcoDive_Integradora\\AppShell.xaml",
+              "RelativeToolTip": "EcoDive_Integradora\\AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-17T21:40:01.24Z",
               "EditorCaption": ""
             }
           ]
